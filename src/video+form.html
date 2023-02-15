@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<html>
+    <head>
+        <link rel="stylesheet" href="common.css">
+        <script src="https://kit.fontawesome.com/e6d44198c7.js" crossorigin="anonymous"></script>
+        <title>Video and Form | Discogs</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tyra Wodén">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <figure>
+                    <a href="https://www.discogs.com">
+                        <img class="logo" src="../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
+                    </a>
+                </figure>
+                
+                <div class="search">
+                    <input type="text" placeholder="Search artists, albums and more...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+                <input type="checkbox" id="checkbox_toggle">
+                <label for="checkbox_toggle" class="hamburger"><i class="fa-solid fa-bars fa-lg"></i></label>
+
+                <nav class="topnav1">
+                    <ul>
+                        <li>
+                            <a href="#">Explore<i class="fa-solid fa-angle-down"></i></a>
+                        </li><li>
+                            <a href="#">Marketplace<i class="fa-solid fa-angle-down"></i></a>
+                        </li><li>
+                            <a href="#">Community<i class="fa-solid fa-angle-down"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="topnav2">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li><li>
+                            <a href="#">Log in</a>
+                        </li><li>
+                            <a href="#"><button>Register</button></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="video">
+                <h2>A. G. Cook - Beautiful Superstar (Official Music Video)</h2>
+                <video class="responsive" width="533" height="300" controls>
+                    <source src="../images/A. G. Cook - Beautiful Superstar (Official Video).mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video> 
+            </section>
+
+            <section class="form">
+                <h2>Form</h2>
+
+                <div class="background">
+                    <form>
+                        <label for="uname">Username</label><br>
+                        <input type="text" id="uname" name="uname"><br>
+                        <label for="email">Email address</label><br>
+                        <input type="text" id="email" name="email"><br>
+                        <label for="password">Password</label><br>
+                        <input type="text" id="password" name="password"><br>
+
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">I accept the Privacy Policy and I agree to the Terms of Service, including minimum age requirements.</label><br>
+                        <input type="checkbox" id="marketing" name="marketing">
+                        <label for="marketing">Sign up for marketing messages to hear about music trends and other news.</label><br>
+
+                        <input type="submit" value="Submit">
+                    </form> 
+                </div>
+            </section>
+
+            <footer class="footer"></footer>
+        </div>
+    </body>
+</html>

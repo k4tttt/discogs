@@ -1,0 +1,483 @@
+.container {
+    grid-template-rows: 68px 70px auto minmax(150px, auto) 100px auto minmax(270px, auto) auto 300px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.albuminfo {
+    grid-column: 1/2; grid-row: 3/4;
+    /*background-color: cornflowerblue;*/
+    padding-left: 20%;
+    padding-right: 5%;
+}
+
+.albuminfo img {
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.albuminfo figcaption > h1  {
+    display: none;
+}
+
+.tracklist {
+    grid-column: 2/5; grid-row: 3/4;
+    /*background-color: lightseagreen;*/
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.tracklist h1 {
+    margin-top: 4px;
+}
+
+.tracklist ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px 350px 0px 0px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.tracklist li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.tracklist li:nth-child(1) {
+    padding-left: 6px;
+}
+
+.tracklist li:nth-child(2) {
+    float: right;
+    padding-right: 6px;
+}
+
+.tracklist p {
+    margin: 6px 0px;
+}
+
+
+/*------------ CREDITS ------------*/
+.credits {
+    grid-column: 1/5; grid-row: 4/5;
+    /*background-color: skyblue;*/
+    padding-top: 30px;
+    padding-left: 5%;
+    display: inline-block;
+}
+
+.credits li {
+    display: inline-block;
+}
+
+.credits a {
+    font-weight: bold;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+.credits img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.credits ul {
+    padding: 0px;
+}
+
+.credit_item ul {
+    padding-right: 60px;
+    padding-bottom: 12px;
+}
+
+.credit_desc {
+    display: flex;
+    align-items: center;
+}
+
+.credit_desc li:nth-child(2) {
+    padding-left: 10px;
+}
+
+
+/*------------ VERSIONS ------------*/
+.version_nav {
+    grid-column: 1/5; grid-row: 5/6;
+    /*background-color: paleturquoise;*/
+    padding-left: 5%;
+    padding-top: 6px;
+}
+
+.versions {
+    grid-column: 1/5; grid-row: 6/7;
+    /*background-color: gold;*/
+    padding-left: 5%;
+    /*padding-top: 12px;*/
+}
+
+.background {
+    background-color: #E3E3E3;
+    width: 75%;
+    padding: 14px 20px;
+    border-radius: 2px;
+}
+
+.preheader {
+    display: flex;
+    align-items: center;
+}
+
+.preheader a {
+    margin-left: auto;
+}
+
+.versions table, .versions td, .versions th, .versions tr {
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+
+.versions table {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.versions img {
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+}
+
+.versions a:hover {
+    text-decoration: underline;
+}
+
+.versions th, .versions td {
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.versions th {
+    padding-bottom: 12px;
+}
+
+.versions td {
+    background-color: white;
+    height: 106px;
+}
+
+.versions tr {
+    border: 2px solid #D7D7D7;
+    border-radius: 3px;
+}
+
+.thead tr {
+    border: none;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.versions td:nth-child(1) {
+    width: 100px;
+}
+
+.expand {
+    float: right;
+    border-right: 4px solid #7070FF;
+    border-left: 2px solid #D7D7D7;
+    border-bottom: none;
+    border-radius: 0px;
+    height: 100%;
+    padding: 8px;
+}
+
+.expand:hover {
+    border-right: 4px solid #6464FF;
+    border-bottom: none;
+}
+
+.expand i {
+    margin: 0px;
+}
+
+
+/*------------ RECOMMENDATIONS ------------*/
+.recommendations {
+    grid-column: 1/5; grid-row: 7/8;
+    padding-left: 5%;
+    /*background-color: lightcoral;*/
+    padding-top: 30px;
+}
+
+/*
+.recommendations td {
+    width: 150px;
+    padding-right: 50px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/
+
+.recommendations li {
+    display: inline-block;
+    width: 150px;
+    padding: 0px 60px 20px 0px;
+}
+
+.recommendations figcaption {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.recommendations ul {
+    padding: 0px;
+}
+
+.recommendations img {
+    border-radius: 2px;
+}
+
+.recommendations a {
+    font-size: 13px;
+}
+
+.recommendations a:hover {
+    text-decoration: underline;
+}
+
+
+/*------------ REVIEWS ------------*/
+.reviews {
+    grid-column: 1/3; grid-row: 8/9;
+    /*background-color: tomato;*/
+    padding-left: 10%;
+    padding-bottom: 30px;
+}
+
+.fa-plus {
+    margin-left: 6px;
+}
+
+.reviews ul {
+    padding: 0px;
+    list-style-type: none;
+    padding-top: 12px;
+}
+
+.reviews li {
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 20px;
+}
+
+.fa-star {
+    margin: 0px;
+    padding-right: 4px;
+}
+
+.reviews table, .reviews td, .reviews th, .reviews tr {
+    /*border: 1px solid;*/
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+
+.reviews td {
+    padding-left: 10px;
+}
+
+.reviews td:nth-child(1) {
+    padding-left: 0px;
+}
+
+.ref, .ref a {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.ref a:hover {
+    text-decoration: underline;
+}
+
+.fa-reply {
+    margin-right: 6px;
+}
+
+.endrow td {
+    padding-bottom: 16px;
+}
+
+
+/*------------ STATISTICS ------------*/
+.statistics {
+    grid-column: 3/5; grid-row: 8/9;
+    /*background-color: moccasin;*/
+    margin-left: 15%;
+}
+
+.statistics table {
+    width: 40%;
+}
+
+.statistics table, .statistics td, .statistics th, .statistics tr {
+    border-collapse: collapse;
+}
+
+.statistics td {
+    font-size: 13px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.statistics td:nth-child(1) {
+    padding-left: 6px;
+}
+
+.statistics td:nth-child(2) {
+    padding-right: 6px;
+}
+
+.statistics ul {
+    padding: 0px;
+    padding-top: 14px;
+}
+
+.statistics li {
+    display: inline-block;
+}
+
+.statistics li:nth-child(1) button {
+    border-radius: 3px 0px 0px 3px;
+}
+
+.statistics li:nth-child(2) button {
+    border-radius: 0px 3px 3px 0px;
+}
+
+.titles a {
+    font-weight: bold;
+}
+
+.footer {
+    grid-column: 1/5;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-rows: 68px 70px auto auto auto auto auto auto auto auto 400px;
+        grid-template-columns: 1fr;
+    }
+
+    .header { grid-row: 1/2; grid-column: 1/2; }
+
+    .page_nav { grid-row: 2/3; grid-column: 1/2; }
+
+    .albuminfo {
+        grid-row: 3/4; grid-column: 1/2;
+        padding: 0px;
+        display: inline;
+        vertical-align: middle;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .albuminfo figcaption > h1 {
+        display: block;
+        margin: 0px;
+        padding-bottom: 12px;
+        text-align: center;
+    }
+
+    .albuminfo img {
+        width: 250px; height: 250px;
+    }
+
+    .albuminfo table {
+        width: 250px;
+    }
+
+    .tracklist { grid-row: 4/5; grid-column: 1/2; }
+
+    .tracklist h1 {
+        /*text-align: center;*/
+        display: none;
+    }
+    
+    .tracklist ul {
+        margin: 0px;
+    }
+
+    .credits { grid-row: 5/6; grid-column: 1/2; }
+
+    .credits li {
+        display: block;
+    }
+
+    .version_nav {
+        grid-row: 6/7; grid-column: 1/2;
+        padding-bottom: 20px;
+    }
+
+    .background {
+        width: 85%;
+        vertical-align: middle;
+        margin: auto;
+    }
+
+    .versions {
+        grid-row: 7/8; grid-column: 1/2;
+        padding: 0px;
+        
+    }
+
+    .versions thead {
+        display: none;
+    }
+
+    .versions table {
+        background-color: white;
+    }
+
+    .versions td {
+        display: block;
+        height: auto;
+    }
+
+    .versions td:nth-child(1), .versions td:nth-child(6) {
+        display: table-cell;
+        height: 150px;
+    }
+
+    .versions td:nth-child(2) {
+        padding-top: 20px;
+    }
+
+    .versions td:nth-child(5) {
+        padding-bottom: 15.75px;
+    }
+
+    .recommendations { grid-row: 8/9; grid-column: 1/2; }
+
+    .statistics {
+        grid-row: 9/10; grid-column: 1/2;
+        margin: 0px;
+        padding-left: 5%;
+        padding-bottom: 20px;
+    }
+
+    .reviews {
+        grid-row: 10/11; grid-column: 1/2;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .footer { grid-row: 11/12; grid-column: 1/2; }
+}
