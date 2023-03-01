@@ -24,13 +24,8 @@ p, a, span, td, th, label {
     text-decoration: none;
 }
 
-td {
-    vertical-align: top;
-}
-
-figure {
-    margin: 0px;
-}
+td {vertical-align: top;}
+figure {margin: 0px;}
 
 button {
     background-color: #8888FF;
@@ -48,17 +43,21 @@ button:hover {
     border-bottom: 4px solid #6464FF;
 }
 
-.discography a:hover {
-    text-decoration: underline;
+input {
+    width: 220px;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    padding-right: 60px;
+    color: #D0D0D0;
 }
 
-.discography img {
-    transition: 0.2s;
-}
+input:focus {color: black;}
 
-.discography img:hover {
-    transform: scale(1.015);
-}
+.discography a:hover {text-decoration: underline;}
+.discography img {transition: 0.2s;}
+.discography img:hover {transform: scale(1.015);}
 
 .left_aligned {
     float: left;
@@ -67,27 +66,14 @@ button:hover {
     padding-right: 6px;
 }
 
-.right_aligned {
-    float: right;
-    margin: 6px 0px;
-}
-
-.right_aligned a {
-    text-decoration: underline;
-}
-
-.responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-.bold {
-    font-weight: bold;
-}
+.right_aligned {float: right; margin: 6px 0px;}
+.right_aligned a {text-decoration: underline;}
+.responsive {max-width: 100%; height: auto;}
+.bold {font-weight: bold;}
 
 .container {
     display: grid;
-    grid-template-rows: 68px auto auto 300px;
+    grid-template-rows: minmax(70px, auto) auto auto 400px;
 }
 
 
@@ -106,6 +92,7 @@ button:hover {
     cursor: pointer;
     max-width: 100%;
     height: auto;
+    /*padding-right: 24px;*/
 }
 
 .header a {
@@ -113,43 +100,22 @@ button:hover {
     text-decoration: none;
 }
 
-.topnav1 {
-    margin-left: 20px;
+.topnav0 {
+    display: flex;
+    align-items: center;
+    height: 52px;
 }
 
-.topnav1 li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.topnav1 ul, .topnav2 ul {
-    padding: 0px;
-}
-
-.topnav2 {
-    margin-left: auto;
-}
-
-.topnav2 li {
-    display: inline-block;
-    padding: 0px 16px;
-}
-
-.topnav1 li a, .topnav2 li a {
-    transition: all 0.3s ease 0s;
-}
-
-.topnav1 li a:hover, .topnav2 li a:hover {
-    opacity: 0.75;
-}
-
-.topnav2 li:nth-child(3) {
-    padding-right: 0px;
-}
-
-.topnav2 li:nth-child(3) a:hover {
-    opacity: 1;
-}
+.topnav1 {margin-left: 20px;}
+.topnav1 li {display: inline-block; padding: 0px 20px;}
+.topnav1 ul, .topnav2 ul {padding: 0px;}
+.topnav2 {margin-left: auto;}
+.topnav2 li {display: inline-block; padding: 0px 16px;}
+.topnav1 li a, .topnav2 li a, .hamburger {transition: all 0.3s ease 0s;}
+.topnav1 li a:hover, .topnav2 li a:hover, .hamburger:hover {opacity: 0.75;}
+.topnav2 li:nth-child(3) {padding-right: 0px;}
+.topnav2 li:nth-child(3) a:hover {opacity: 1;}
+.fa-angle-down, .fa-angle-right {margin-left: 6px;}
 
 .fa-magnifying-glass {
     position: absolute;
@@ -159,36 +125,11 @@ button:hover {
     color: #D0D0D0;
 }
 
-.fa-angle-down, .fa-angle-right {
-    margin-left: 6px;
-}
-
 .search {
     position: relative;
     display: flex;
-    margin-left: 4%;
-}
-
-/*
-.search_icon {
-    position: absolute;
-    top: 8px;
-    margin-left: auto;
-    opacity: 0.6;
-}*/
-
-input {
-    width: 220px;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-    padding: 10px;
-    padding-right: 60px;
-    color: #D0D0D0;
-}
-
-input:focus {
-    color: black;
+    /*margin-left: 4%;*/
+    margin-left: 24px;
 }
  
 .header button {
@@ -201,11 +142,6 @@ input:focus {
     border-bottom: 2px solid #5858FF;
 }
 
-
-.header input[type=checkbox] {
-    display: none;
-}
-
 .hamburger {
     display: none;
     margin-left: auto;
@@ -215,21 +151,34 @@ input:focus {
 }
 
 @media screen and (max-width: 1150px) {
-    .header {
-        /*background-color: hotpink;*/
+    .header {flex-direction: column;}
+    .hamburger {display: flex; margin-left: auto;}
+    .topnav1, .topnav2 {display: none;}
+    .topnav0 {width: 100%; padding-top: 9px;}
+
+    .topnav1, .topnav2, .topnav1 ul, .topnav2 ul {
+        margin: 0px;
+        width: 100%;
+        text-align: center;
     }
 
-    .topnav1, .topnav2 {
-        display: none;
-    }
+    .topnav1 ul {padding: 10px 0px;}
+    .topnav2 ul {margin-bottom: 20px;}
 
-    .header input[type=checkbox]:checked ~ .topnav1, .header input[type=checkbox]:checked ~ .topnav2 {
+    .topnav1 li {
         display: block;
+        padding: 12px 0px;
+        text-align: center;
     }
-    
-    .hamburger {
-        display: flex;
-    }
+
+    .topnav1 a {padding: 14px 30%; width: 100%;}
+    .topnav1 a:hover {background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(100, 100, 255, 1), rgba(0, 0, 0, 0));}
+    .topnav1.responsive, .topnav2.responsive {display: flex; text-align: center;}
+}
+
+@media screen and (max-width: 520px) {
+    .header input {width: 150px;}
+    .fa-magnifying-glass {margin-left: 190px;}
 }
 
 /*------- PAGE NAVIGATION ------*/
@@ -242,64 +191,22 @@ input:focus {
     align-items: center;
 }
 
-.page_nav ul {
-    padding: 0px;
-    margin: 12px 0px;
-}
-
-.page_nav li {
-    display: inline-block;
-}
-
-.page_nav li:nth-child(3), .page_nav li:nth-child(5) {
-    padding-left: 6px;
-}
-
-.page_nav a:hover {
-    text-decoration: underline;
-}
-
-.page_nav button {
-    float: right;
-}
+.page_nav ul {padding: 0px; margin: 12px 0px;}
+.page_nav li {display: inline-block;}
+.page_nav li:nth-child(3), .page_nav li:nth-child(5) {padding-left: 6px;}
+.page_nav a:hover {text-decoration: underline;}
+.page_nav button {float: right;}
 
 
 /*------- BUTTONS ------*/
-
-.buttons {
-    padding-left: 6.666%;
-}
-
-.buttons ul {
-    padding: 0px;
-}
-
-.button1 {
-    /*margin-left: 7.5%;*/
-    margin-top: 26px;
-}
-
-.functions {
-    /*padding-left: 7.5%;*/
-    padding-top: 4px;
-}
-
-.functions li {
-    display: flex;
-    float: left;
-}
-
-.functions li:nth-child(1) button {
-    border-radius: 3px 0px 0px 3px;
-}
-
-.functions li:nth-child(2) button {
-    border-radius: 0px;
-}
-
-.functions li:nth-child(3) button {
-    border-radius: 0px 3px 3px 0px;
-}
+.buttons {padding-left: 6.666%;}
+.buttons ul {padding: 0px;}
+.button1 {margin-top: 26px;}
+.functions {padding-top: 4px;}
+.functions li {display: flex; float: left;}
+.functions li:nth-child(1) button {border-radius: 3px 0px 0px 3px;}
+.functions li:nth-child(2) button {border-radius: 0px;}
+.functions li:nth-child(3) button {border-radius: 0px 3px 3px 0px;}
 
 
 /*--------------- FOOTER ---------------*/
@@ -308,8 +215,41 @@ input:focus {
     grid-column: 1/5;
 }
 
+.footer button {
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #7070FF;
+    border-bottom: 4px solid #6464FF;
+}
 
-/*stuff*/
+.footer button:hover {
+    background-color: #6464FF;
+    border-bottom: 4px solid #5858FF;
+}
+
+.footer button:nth-child(2) {
+    margin-left: 15px;
+    display: none;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer img {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.1s;
+}
+
+.footer img:hover {transform: scale(1.02);}
+
+/*--------------- VIDEO AND FORM ---------------*/
 .video {
     grid-column: 1/5; grid-row: 2/3;
     padding-left: 5%; padding-right: 5%;
@@ -317,9 +257,7 @@ input:focus {
     padding-bottom: 30px;
 }
 
-.video video {
-    border-radius: 5px;
-}
+.video video {border-radius: 5px;}
 
 .form {
     grid-column: 1/5; grid-row: 3/4;
@@ -334,19 +272,9 @@ input:focus {
     border-radius: 2px;
 }
 
-.form input[type=text]{
-    width: 75%;
-    margin: 10px 0px;
-}
-
-.form input[type=text]:focus{
-    outline: 2px solid #8888FF;
-}
-
-.form input[type=checkbox] {
-    width: auto;
-    margin: 10px 0px;
-}
+.form input[type=text]{width: 75%; margin: 10px 0px;}
+.form input[type=text]:focus{outline: 2px solid #8888FF;}
+.form input[type=checkbox] {width: auto; margin: 10px 0px;}
 
 .form input[type=submit] {
     background-color: #8888FF;

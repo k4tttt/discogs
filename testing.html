@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Testing</title>
+        <style>
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                /*background: linear-gradient(#01062d, #30005f);*/
+                box-sizing: border-box;
+            }
+
+            button {
+                background: linear-gradient(#3A00D6, #7F1BFF, #BD00FF);
+                /*background: #fff;*/
+                padding: 21px 25px;
+                font-size: 18px;
+                outline: none;
+                cursor: pointer;
+                text-decoration: none;
+                border: none;
+                position: relative;
+                z-index: 0;
+                border-radius: 20px;
+                color: #fff;
+            }
+
+            button::before {
+                content: "";
+                background: linear-gradient(
+                    45deg, #FF0000, #FF7300, #FFFB00, #00FFD5, #002BFF,
+                    #7A00FF, #FF00C8, #FF0000
+                );
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(6px);
+                width: calc(100% + 5px);
+                height: calc(100% + 5px);
+                animation: glow 20s linear infinite;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                border-radius: 20px;
+            }
+
+            button:hover:active {
+                color: #FFF;
+            }
+
+            button:hover::before {
+                opacity: 1;
+            }
+
+            button::after {
+                z-index: -1;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(#3A00D6, #7F1BFF, #BD00FF);
+                /*background: #fff;*/
+                left: 0; top: 0;
+                border-radius: 20px;
+            }
+
+            @keyframes glow {
+                0% {
+                    background-position: 0 0;
+                }
+                50% {
+                    background-position: 400% 0;
+                }
+                100% {
+                    background-position: 0 0;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <button>Swag button</button>
+    </body>
+</html>

@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="../common.css">
         <link rel="stylesheet" href="../styles_discography.css">
         <script src="https://kit.fontawesome.com/e6d44198c7.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="../script.js"></script>
         <title>A. G. Cook | Albums | Discogs</title>
         <meta charset="UTF-8">
         <meta name="author" content="Tyra Wodén">
@@ -13,20 +16,21 @@
     <body>
         <div class="container">
             <header class="header">
-                <figure>
-                    <a href="https://www.discogs.com">
-                        <img class="logo" src="../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
-                    </a>
-                </figure>
-                
-                <div class="search">
-                    <input type="text" placeholder="Search artists, albums and more...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="topnav0">
+                    <figure>
+                        <a href="https://www.discogs.com">
+                            <img class="logo" src="../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
+                        </a>
+                    </figure>
+                    
+                    <div class="search">
+                        <input id="searchbar" type="text" placeholder="Search artists, albums and more...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <a class="hamburger" href="javascript:void(0);" onclick="toggle()"><i class="fa-solid fa-bars fa-lg"></i></a>
                 </div>
                 
-                <input type="checkbox" id="checkbox_toggle">
-                <label for="checkbox_toggle" class="hamburger"><i class="fa-solid fa-bars fa-lg"></i></label>
-
                 <nav class="topnav1">
                     <ul>
                         <li>
@@ -106,7 +110,17 @@
                 </ul>
             </nav>
 
-            <footer class="footer"></footer>
+            <footer class="footer">
+                <button onclick="changeColor()">
+                    Change color
+                </button><button id="reset" onclick="resetColor()">
+                    Reset color
+                </button>
+                <div>
+                    <img class="draggable" src="../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
+                    <img class="draggable" src="../images/discogs_icon.png" alt="Discogs logo" height="100" width="100">
+                </div>
+            </footer>
         </div>
     </body>
 </html>
