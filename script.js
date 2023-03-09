@@ -62,16 +62,18 @@ function toggleTopnav() {
     }
 
     if (document.documentElement.clientWidth <= 520) {
-        $(document.getElementById("searchbar")).attr("placeholder", "Search...");
+        $(document.getElementById("searchbar")).attr("placeholder",
+        "Search...");
     }
 
     if (document.documentElement.clientWidth > 520) {
-        $(document.getElementById("searchbar")).attr("placeholder", "Search artists, albums and more...");
+        $(document.getElementById("searchbar")).attr("placeholder",
+        "Search artists, albums and more...");
     }
 }
 
 
-/*------------------- bullshit som inte funkar ------------------*/
+/*
 var imgsrcs = ["images/apple_vs_7g.jpg", "images/apple.jpg", "images/7g.jpg"];
 
 let i = 0;
@@ -90,7 +92,7 @@ function albumHoverOut(img) {
     clearInterval(repeat);
     img.src = "images/albums.png";
     img.style.boxShadow = "none";
-}
+}*/
 
 /*
 $(document).ready(function() {
@@ -112,8 +114,6 @@ $(document).ready(function() {
 /*------------------- SLIDESHOW ------------------*/
 let slideIndex = 1;
 let numItemsPerSlide;
-
-
 
 $(document).ready(function() {
     if (document.getElementById("apple")) {
@@ -156,10 +156,12 @@ function plusSlides(n) {
 }
 
 /**
- * Set which slide to be shown, and hide the remaining ones. 
+ * Set which slide to be shown, and hide the remaining ones. Also 
+ * display the correct amount of dots.
  * @param {*} n index of slide to be shown.
  */
 function showSlides(n) {
+    let dots = document.getElementsByClassName("dot");
     let allSlides = Array.from(document.getElementsByClassName("slide"));
     let slides = new Array;
 
@@ -173,8 +175,15 @@ function showSlides(n) {
     if (n > slides.length) {slideIndex = 1;}    
     if (n < 1) {slideIndex = slides.length;}
 
-    // Set all items to hidden
+    // Hide all dots
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].style.display = "none";
+    }
+
+    // Set all items to hidden and display correct amount of dots
     for (let i = 0; i < slides.length; i++) {
+        dots[i].style.display = "inline-block";
+        dots[i].className = dots[i].className.replace(" active", "");
         let currentSlide = slides[i];
         
         for (let j = 0; j < currentSlide.length; j++) {
@@ -183,14 +192,16 @@ function showSlides(n) {
     }
 
     // Display only the correct slide
+    dots[slideIndex - 1].className += " active";
     let displaySlide = slides[slideIndex - 1];
     
     for (let i = 0; i < displaySlide.length; i++) {
         displaySlide[i].style.display = "inline-block";
     }
 
-    // Set the correct width for the slide container
+    // Set the correct width for the slide container and dots
     document.getElementById("slides").style.width = numItemsPerSlide*190 + "px";
+    document.getElementById("dots").style.width = (numItemsPerSlide*190 + 37.75*2) + "px";
 }
 
 
