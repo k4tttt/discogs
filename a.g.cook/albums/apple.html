@@ -4,29 +4,33 @@
         <link rel="stylesheet" href="../../common.css">
         <link rel="stylesheet" href="../../styles_album.css">
         <script src="https://kit.fontawesome.com/e6d44198c7.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="../../script.js"></script>
         <title>A. G. Cook | Apple | Discogs</title>
         <meta charset="UTF-8">
         <meta name="author" content="Tyra Wodén">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     
-    <body>
+    <body id="apple">
         <div class="container">
             <header class="header">
-                <figure>
-                    <a href="https://www.discogs.com">
-                        <img class="logo" src="../../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
-                    </a>
-                </figure>
-                
-                <div class="search">
-                    <input type="text" placeholder="Search artists, albums and more...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="topnav0">
+                    <figure>
+                        <a href="https://www.discogs.com">
+                            <img class="logo" src="../../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
+                        </a>
+                    </figure>
+                    
+                    <div class="search">
+                        <input id="searchbar" type="text" placeholder="Search artists, albums and more...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <a class="hamburger" href="javascript:void(0);"><i class="fa-solid fa-bars fa-lg"></i></a>
                 </div>
                 
-                <input type="checkbox" id="checkbox_toggle">
-                <label for="checkbox_toggle" class="hamburger"><i class="fa-solid fa-bars fa-lg"></i></label>
-
                 <nav class="topnav1">
                     <ul>
                         <li>
@@ -51,6 +55,7 @@
                     </ul>
                 </nav>
             </header>
+
 
             <nav class="page_nav">
                 <ul>
@@ -206,44 +211,99 @@
 
             <section class="recommendations">
                 <h2>Recommendations</h2>
-                <ul class="discography">
-                    <li>
-                        <figure>
-                            <a href="https://www.discogs.com/master/1647730-Hannah-Diamond-Reflections"><img src="../../images/reflections.jpg" alt="Album cover of reflections" width="150" height="150"></a>
-                            <figcaption>
-                                <a class="bold" href="https://www.discogs.com/master/1647730-Hannah-Diamond-Reflections">Reflections</a><br><a href="https://www.discogs.com/artist/3859775-Hannah-Diamond">Hannah Diamond</a>
-                            </figcaption>
-                        </figure>
-                    </li><li>
-                        <figure>
-                            <a href="https://www.discogs.com/release/12137145-Sophie-Oil-Of-Every-Pearls-Un-Insides"><img src="../../images/oil_of_every_pearls_un-insides.jpg" alt="Album cover of Oil of Every Pearl's Un-Insides" width="150" height="150"></a>
-                            <figcaption>
-                                <a class="bold" href="https://www.discogs.com/release/12137145-Sophie-Oil-Of-Every-Pearls-Un-Insides">Oil of Every Pearl's Un-Insides</a><br><a href="https://www.discogs.com/artist/3150192-Sophie-42">SOPHIE</a>
-                            </figcaption>
-                        </figure>
-                    </li><li>
-                        <figure>
-                            <a href="https://www.discogs.com/master/2630819-Various-Volume-3"><img src="../../images/pc_music_vol.3.jpeg" alt="Album cover of Volume 3" width="150" height="150"></a>
-                            <figcaption>
-                                <a class="bold" href="https://www.discogs.com/master/2630819-Various-Volume-3">Volume 3</a><br><a href="https://www.discogs.com/label/631074-PC-Music-3">PC Music</a>
-                            </figcaption>
-                        </figure>
-                    </li><li>
-                        <figure>
-                            <a href="#"><img src="../../images/7g.jpg" alt="Album cover of 7G" width="150" height="150"></a>
-                            <figcaption>
-                                <a class="bold" href="#">7G</a><br><a href="../../index.html">A. G. Cook</a>
-                            </figcaption>
-                        </figure>
-                    </li><li>
-                        <figure>
-                            <a href="https://www.discogs.com/release/16800267-Planet-1999-Devotion-Deluxe"><img src="../../images/devotion_(deluxe).jpg" alt="Album cover of Devotion (Deluxe)" width="150" height="150"></a>
-                            <figcaption>
-                                <a class="bold" href="https://www.discogs.com/release/16800267-Planet-1999-Devotion-Deluxe">Devotion (Deluxe)</a><br><a href="https://www.discogs.com/artist/7354961-Planet-1999">Planet 1999</a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
+                
+                <div class="slideshow">
+                    <div class="arrow">
+                        <a href="javascript:void(0);" onclick="plusSlides(-1)"><i class="fa-solid fa-angle-left fa-xl"></i></a>
+                    </div><div class="discography" id="slides">
+                        <div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/1787603-A-G-Cook-7G"><img src="../../images/7g.jpg" alt="Album cover of 7G" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/1787603-A-G-Cook-7G">7G</a><br><a href="../../index.html">A. G. Cook</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/release/16800267-Planet-1999-Devotion-Deluxe"><img src="../../images/devotion_(deluxe).jpg" alt="Album cover of Devotion (Deluxe)" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/release/16800267-Planet-1999-Devotion-Deluxe">Devotion (Deluxe)</a><br><a href="https://www.discogs.com/artist/7354961-Planet-1999">Planet 1999</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/2980216-Caroline-Polachek-Desire-I-Want-To-Turn-Into-You"><img src="../../images/desire,_i_want_to_turn_into_you.jpg" alt="Album cover of Desire, I Want To Turn Into You" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/2980216-Caroline-Polachek-Desire-I-Want-To-Turn-Into-You">Desire, I Want To Turn Into You</a><br><a href="https://www.discogs.com/artist/1269616-Caroline-Polachek">Caroline Polachek</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/release/24935812-Doss-4-New-Hit-Songs-Remixes"><img src="../../images/4NHS_Remixes.jpeg" alt="Album cover of 4 New Hit Songs Remixes" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/release/24935812-Doss-4-New-Hit-Songs-Remixes">4 New Hit Songs Remixes</a><br><a href="https://www.discogs.com/artist/3814699-Doss-2">Doss</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/2303896-A-G-Cook-Superstar"><img src="../../images/superstar.jpg" alt="Album cover of Superstar" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/2303896-A-G-Cook-Superstar">Superstar</a><br><a href="../../index.html">A. G. Cook</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/release/6674464-A-G-Cook-Featuring-Hannah-Diamond-Drop-FM"><img src="../../images/drop_fm.jpg" alt="Album cover of Drop FM" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/release/6674464-A-G-Cook-Featuring-Hannah-Diamond-Drop-FM">Drop FM</a><br><a href="../../index.html">A. G. Cook</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/release/12137145-Sophie-Oil-Of-Every-Pearls-Un-Insides"><img src="../../images/oil_of_every_pearls_un-insides.jpg" alt="Album cover of Oil of Every Pearl's Un-Insides" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/release/12137145-Sophie-Oil-Of-Every-Pearls-Un-Insides">Oil of Every Pearl's Un-Insides</a><br><a href="https://www.discogs.com/artist/3150192-Sophie-42">SOPHIE</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/2630819-Various-Volume-3"><img src="../../images/pc_music_vol.3.jpeg" alt="Album cover of Volume 3" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/2630819-Various-Volume-3">Volume 3</a><br><a href="https://www.discogs.com/label/631074-PC-Music-3">PC Music</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/1647730-Hannah-Diamond-Reflections"><img src="../../images/reflections.jpg" alt="Album cover of reflections" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/1647730-Hannah-Diamond-Reflections">Reflections</a><br><a href="https://www.discogs.com/artist/3859775-Hannah-Diamond">Hannah Diamond</a>
+                                </figcaption>
+                            </figure>
+                        </div><div class="slide fade">
+                            <figure>
+                                <a href="https://www.discogs.com/master/2849974-%C3%96-Hypernormality"><img src="../../images/hypernormality.jpg" alt="Album cover of Hypernormality" width="150" height="150"></a>
+                                <figcaption>
+                                    <a class="bold" href="https://www.discogs.com/master/2849974-%C3%96-Hypernormality">Hypernormality</a><br><a href="https://www.discogs.com/artist/6642733-%C3%96-3">Ö</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div><div class="arrow">
+                        <a href="javascript:void(0);" onclick="plusSlides(1)"><i class="fa-solid fa-angle-right fa-xl"></i></a>
+                    </div>
+                </div>
+                <div id="dots">
+                    <span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span><span class="dot">
+                    </span>
+                </div>
             </section>
 
             <section class="reviews">
@@ -316,7 +376,17 @@
                 </ul>
             </aside>
 
-            <footer class="footer"></footer>
+            <footer class="footer">
+                <button onclick="changeColor()">
+                    Change color
+                </button><button id="reset" onclick="resetColor()">
+                    Reset color
+                </button>
+                <div>
+                    <img class="draggable" src="../../images/discogs_logo_white.svg" alt="Discogs logo" height="40" width="109">
+                    <img class="draggable" src="../../images/discogs_icon.png" alt="Discogs icon" height="100" width="100">
+                </div>
+            </footer>
         </div>
     </body>
 </html>

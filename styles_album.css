@@ -1,5 +1,5 @@
 .container {
-    grid-template-rows: 68px 70px auto minmax(150px, auto) 100px auto minmax(270px, auto) auto 300px;
+    grid-template-rows: minmax(70px, auto) 70px auto minmax(150px, auto) 100px auto minmax(270px, auto) auto 400px;
     grid-template-columns: repeat(4, 1fr);
 }
 
@@ -16,9 +16,7 @@
     margin-bottom: 6px;
 }
 
-.albuminfo figcaption > h1  {
-    display: none;
-}
+.albuminfo figcaption > h1  {display: none;}
 
 .tracklist {
     grid-column: 2/5; grid-row: 3/4;
@@ -27,14 +25,12 @@
     padding-right: 5%;
 }
 
-.tracklist h1 {
-    margin-top: 4px;
-}
+.tracklist h1 {margin-top: 4px;}
 
 .tracklist ul {
     list-style-type: none;
     padding: 0px;
-    margin: 0px 350px 0px 0px;
+    margin: 0px 25% 0px 0px;
     border-bottom: 1px solid #DCDCDC;
 }
 
@@ -44,18 +40,9 @@
     margin: 0px;
 }
 
-.tracklist li:nth-child(1) {
-    padding-left: 6px;
-}
-
-.tracklist li:nth-child(2) {
-    float: right;
-    padding-right: 6px;
-}
-
-.tracklist p {
-    margin: 6px 0px;
-}
+.tracklist li:nth-child(1) {padding-left: 6px;}
+.tracklist li:nth-child(2) {float: right; padding-right: 6px;}
+.tracklist p {margin: 6px 0px;}
 
 
 /*------------ CREDITS ------------*/
@@ -67,17 +54,9 @@
     display: inline-block;
 }
 
-.credits li {
-    display: inline-block;
-}
-
-.credits a {
-    font-weight: bold;
-}
-
-.credits a:hover {
-    text-decoration: underline;
-}
+.credits li {display: inline-block;}
+.credits a {font-weight: bold;}
+.credits a:hover {text-decoration: underline;}
 
 .credits img {
     width: 50px;
@@ -86,23 +65,10 @@
     border-radius: 2px;
 }
 
-.credits ul {
-    padding: 0px;
-}
-
-.credit_item ul {
-    padding-right: 60px;
-    padding-bottom: 12px;
-}
-
-.credit_desc {
-    display: flex;
-    align-items: center;
-}
-
-.credit_desc li:nth-child(2) {
-    padding-left: 10px;
-}
+.credits ul {padding: 0px;}
+.credit_item ul {padding-right: 60px; padding-bottom: 12px;}
+.credit_desc {display: flex; align-items: center;}
+.credit_desc li:nth-child(2) {padding-left: 10px;}
 
 
 /*------------ VERSIONS ------------*/
@@ -127,14 +93,8 @@
     border-radius: 2px;
 }
 
-.preheader {
-    display: flex;
-    align-items: center;
-}
-
-.preheader button {
-    margin-left: auto;
-}
+.preheader {display: flex; align-items: center;}
+.preheader button {margin-left: auto;}
 
 .versions table, .versions td, .versions th, .versions tr {
     border-collapse: collapse;
@@ -142,19 +102,9 @@
     padding: 0px;
 }
 
-.versions table {
-    width: 100%;
-    margin-top: 16px;
-}
-
-.versions img {
-    border: 1px solid #E3E3E3;
-    border-radius: 2px;
-}
-
-.versions a:hover {
-    text-decoration: underline;
-}
+.versions table {width: 100%; margin-top: 16px;}
+.versions img {border: 1px solid #E3E3E3; border-radius: 2px;}
+.versions a:hover {text-decoration: underline;}
 
 .versions th, .versions td {
     vertical-align: middle;
@@ -162,31 +112,12 @@
     padding-left: 8px;
 }
 
-.versions th {
-    padding-bottom: 12px;
-}
-
-.versions td {
-    background-color: white;
-    height: 106px;
-}
-
-.versions tr {
-    border: 2px solid #D7D7D7;
-    border-radius: 3px;
-}
-
-.thead tr {
-    border: none;
-}
-
-.middle {
-    vertical-align: middle;
-}
-
-.versions td:nth-child(1) {
-    width: 100px;
-}
+.versions th {padding-bottom: 12px;}
+.versions td {background-color: white; height: 106px;}
+.versions tr {border: 2px solid #D7D7D7; border-radius: 3px;}
+.thead tr {border: none;}
+.middle {vertical-align: middle;}
+.versions td:nth-child(1) {width: 100px;}
 
 .expand {
     float: right;
@@ -198,39 +129,26 @@
     padding: 8px;
 }
 
-.expand:hover {
-    border-right: 4px solid #6464FF;
-    border-bottom: none;
-}
-
-.expand i {
-    margin: 0px;
-}
+.expand:hover {border-right: 4px solid #6464FF; border-bottom: none;}
+.expand i {margin: 0px;}
 
 
 /*------------ RECOMMENDATIONS ------------*/
 .recommendations {
     grid-column: 1/5; grid-row: 7/8;
-    padding-left: 5%;
     /*background-color: lightcoral;*/
-    padding-top: 30px;
+    padding: 30px 5%;
+    /*display: block;*/
 }
 
-/*
-.recommendations td {
-    width: 150px;
-    padding-right: 50px;
-    display: inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}*/
-
-.recommendations li {
+.recommendations figure {
     display: inline-block;
     width: 150px;
-    padding: 0px 60px 20px 0px;
+    padding: 0px 60px 0px 0px;
 }
+
+
+.recommendations figure:last-child {padding: 0;}
 
 .recommendations figcaption {
     overflow: hidden;
@@ -239,21 +157,45 @@
     margin-top: 4px;
 }
 
-.recommendations ul {
-    padding: 0px;
+.recommendations ul {padding: 0px;}
+.recommendations img {border-radius: 2px;}
+.recommendations a {font-size: 13px;}
+.recommendations a:hover {text-decoration: underline;}
+
+.slideshow {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+    /*background-color: lightgreen;*/
 }
 
-.recommendations img {
-    border-radius: 2px;
+.slide {margin: auto 20px;}
+.arrow:first-child a {padding: 10px; margin-right: 8px;}
+.arrow:last-child {margin-left: auto;}
+.arrow:last-child a {padding: 10px; margin-left: 8px;}
+.arrow i {margin: 0; transition: 0.2s;}
+.arrow i:hover {transform: scale(1.25);}
+
+.fade {animation-name: fade; animation-duration: 1s;}
+
+@keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
 }
 
-.recommendations a {
-    font-size: 13px;
+.dot {
+    height: 3px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    transition: background-color 0.4s ease;
 }
 
-.recommendations a:hover {
-    text-decoration: underline;
-}
+#dots {text-align: center;}
+.active {background-color: #000;}
 
 
 /*------------ REVIEWS ------------*/
@@ -264,25 +206,15 @@
     padding-bottom: 30px;
 }
 
-.fa-plus {
-    margin-left: 6px;
-}
-
 .reviews ul {
     padding: 0px;
     list-style-type: none;
     padding-top: 12px;
 }
 
-.reviews li {
-    border-bottom: 1px solid #DCDCDC;
-    margin-bottom: 20px;
-}
-
-.fa-star {
-    margin: 0px;
-    padding-right: 4px;
-}
+.reviews li {border-bottom: 1px solid #DCDCDC; margin-bottom: 20px;}
+.fa-plus {margin-left: 6px;}
+.fa-star {margin: 0px; padding-right: 4px;}
 
 .reviews table, .reviews td, .reviews th, .reviews tr {
     /*border: 1px solid;*/
@@ -291,30 +223,12 @@
     padding: 0px;
 }
 
-.reviews td {
-    padding-left: 10px;
-}
-
-.reviews td:nth-child(1) {
-    padding-left: 0px;
-}
-
-.ref, .ref a {
-    font-size: 12px;
-    font-style: italic;
-}
-
-.ref a:hover {
-    text-decoration: underline;
-}
-
-.fa-reply {
-    margin-right: 6px;
-}
-
-.endrow td {
-    padding-bottom: 16px;
-}
+.reviews td {padding-left: 10px;}
+.reviews td:nth-child(1) {padding-left: 0px;}
+.ref, .ref a {font-size: 12px; font-style: italic;}
+.ref a:hover {text-decoration: underline;}
+.fa-reply {margin-right: 6px;}
+.endrow td {padding-bottom: 16px;}
 
 
 /*------------ STATISTICS ------------*/
@@ -324,60 +238,26 @@
     margin-left: 15%;
 }
 
-.statistics table {
-    width: 40%;
-}
+.statistics table {width: 50%;}
+.statistics table, .statistics td, .statistics th, .statistics tr {border-collapse: collapse;}
+.statistics td {font-size: 13px; border-bottom: 1px solid #DCDCDC;}
+.statistics td:nth-child(1) {padding-left: 6px;}
+.statistics td:nth-child(2) {padding-right: 6px;}
+.statistics ul {padding: 0px; padding-top: 14px;}
+.statistics li {display: inline-block;}
+.statistics li:nth-child(1) button {border-radius: 3px 0px 0px 3px;}
+.statistics li:nth-child(2) button {border-radius: 0px 3px 3px 0px;}
+.titles a {font-weight: bold;}
 
-.statistics table, .statistics td, .statistics th, .statistics tr {
-    border-collapse: collapse;
-}
-
-.statistics td {
-    font-size: 13px;
-    border-bottom: 1px solid #DCDCDC;
-}
-
-.statistics td:nth-child(1) {
-    padding-left: 6px;
-}
-
-.statistics td:nth-child(2) {
-    padding-right: 6px;
-}
-
-.statistics ul {
-    padding: 0px;
-    padding-top: 14px;
-}
-
-.statistics li {
-    display: inline-block;
-}
-
-.statistics li:nth-child(1) button {
-    border-radius: 3px 0px 0px 3px;
-}
-
-.statistics li:nth-child(2) button {
-    border-radius: 0px 3px 3px 0px;
-}
-
-.titles a {
-    font-weight: bold;
-}
-
-.footer {
-    grid-column: 1/5;
-}
+.footer {grid-column: 1/5;}
 
 @media screen and (max-width: 800px) {
     .container {
-        grid-template-rows: 68px 70px auto auto auto auto auto auto auto auto 400px;
+        grid-template-rows: minmax(70px, auto) 70px auto auto auto auto auto auto auto auto 400px;
         grid-template-columns: 1fr;
     }
 
     .header { grid-row: 1/2; grid-column: 1/2; }
-
     .page_nav { grid-row: 2/3; grid-column: 1/2; }
 
     .albuminfo {
@@ -396,30 +276,15 @@
         text-align: center;
     }
 
-    .albuminfo img {
-        width: 250px; height: 250px;
-    }
-
-    .albuminfo table {
-        width: 250px;
-    }
+    .albuminfo img {width: 250px; height: 250px;}
+    .albuminfo table {width: 250px;}
 
     .tracklist { grid-row: 4/5; grid-column: 1/2; }
-
-    .tracklist h1 {
-        /*text-align: center;*/
-        display: none;
-    }
-    
-    .tracklist ul {
-        margin: 0px;
-    }
+    .tracklist h1 {display: none;}
+    .tracklist ul {margin: 0px;}
 
     .credits { grid-row: 5/6; grid-column: 1/2; }
-
-    .credits li {
-        display: block;
-    }
+    .credits li {display: block;}
 
     .version_nav {
         grid-row: 6/7; grid-column: 1/2;
@@ -435,42 +300,37 @@
     .versions {
         grid-row: 7/8; grid-column: 1/2;
         padding: 0px;
-        
     }
 
-    .versions thead {
-        display: none;
+    .versions thead {display: none;}
+    .versions table {background-color: white;}
+    .versions td {display: block; height: auto;}
+    .versions td:nth-child(1), .versions td:nth-child(6) {display: table-cell; height: 150px;}
+    .versions td:nth-child(2) {padding-top: 20px;}
+    .versions td:nth-child(5) {padding-bottom: 15.75px;}
+
+    .recommendations {
+        grid-row: 8/9; grid-column: 1/2;
+        display: inline;
+        vertical-align: middle;
+        margin: auto;
     }
 
-    .versions table {
-        background-color: white;
-    }
-
-    .versions td {
-        display: block;
-        height: auto;
-    }
-
-    .versions td:nth-child(1), .versions td:nth-child(6) {
-        display: table-cell;
-        height: 150px;
-    }
-
-    .versions td:nth-child(2) {
-        padding-top: 20px;
-    }
-
-    .versions td:nth-child(5) {
-        padding-bottom: 15.75px;
-    }
-
-    .recommendations { grid-row: 8/9; grid-column: 1/2; }
+    .recommendations h2 {text-align: center;}
 
     .statistics {
         grid-row: 9/10; grid-column: 1/2;
-        margin: 0px;
-        padding-left: 5%;
         padding-bottom: 20px;
+        display: inline;
+        vertical-align: middle;
+        margin: auto;
+        text-align: center;
+    }
+
+    .statistics table {
+        width: 240px;
+        vertical-align: middle;
+        margin: auto;
     }
 
     .reviews {
